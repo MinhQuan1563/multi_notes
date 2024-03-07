@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Multi_Notes</string>
+    <item name="notification_reminder" type="id" />
+</resources>

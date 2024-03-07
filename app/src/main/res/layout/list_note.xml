@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    tools:context=".ListNoteActivity">
+
+    <TextView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/black2"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Ghi chú"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="24sp"/>
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@id/topView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="Add Note"
+        android:src="@drawable/add"/>
+
+    <ImageButton
+        android:id="@+id/btnSearchInfo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@id/btnAdd"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="Search Note"
+        android:src="@drawable/search"/>
+
+    <ImageButton android:id="@+id/btnDeletes"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@id/btnSearchInfo"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="Delete Note"
+        android:src="@drawable/trash"/>
+
+    <TextView android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topView"
+        android:gravity="center"
+        android:text="Không có ghi chú nào!"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:background="@color/black2"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/textColor"
+        app:iconifiedByDefault="false"
+        app:queryHint="Tìm kiếm"
+        android:layout_below="@+id/topView"
+        android:visibility="gone">
+
+    </androidx.appcompat.widget.SearchView>
+
+    <ListView android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="8dp" />
+
+</RelativeLayout>
